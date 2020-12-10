@@ -48,4 +48,11 @@ Then go to refdata-gex-mm10-2020-A/genes/genes.gtf for this file.
 
 When velocyto is done, it will place a .loom file in your cellranger directory. This file will contain all the unspliced and spliced data from your raw reads per cells. We like working with this because it is smaller in file size.
 
-The next step is the analysis itself. Now most of the work will be on python. To do this, we used Spyder https://www.spyder-ide.org/ using Anaconda. Amazing program that helps you use python and great for beginners. Install it and then you are not in the python environment. We use scVelo for the next analysis step. Just like linux, setting up the dependencies is the first step. We stitched together code from different places to make this python code.
+The next step is the analysis itself. Now most of the work will be on python. To do this, we used Spyder https://www.spyder-ide.org/ using Anaconda. Amazing program that helps you use python and great for beginners. Install it and then you are not in the python environment. We use scVelo for the next analysis step. Just like linux, setting up the dependencies is the first step. We stitched together code from different places to make this python code: https://github.com/awaisj14/BipCo/blob/main/Mullers%20scVelo.py
+
+There you have it, you should be able to visualize your gene of interest in your dataset.
+
+2) SCENIC analysis pipeline
+
+Luckily, if you have generated the .loom files from above, the next half is going to be fairly simple. The only thing i would recommend is having a powerful PC to run this next set of code because SCENIC is very computationally intensive program. 
+
