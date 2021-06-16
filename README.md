@@ -6,6 +6,8 @@ We would love feedback on how we can improve and any issues you might be facing.
 
 1) scRNA-seq RNA-velocity
 
+Fastq files can be downloaded from this GEO acession number: GSE169519
+
 We first used cellranger (the program created by 10x Genomics to align and count raw reads per cell with a genome) to generate the matrix files from our fastq files. For installation, follow this guide (https://support.10xgenomics.com/single-cell-gene-expression/software/pipelines/latest/installation). This will generate a folder containing the .bam files, matrix.mtx, barcodes.tsv and features.tsv files among others. 
 
 Once you have this folder, the next step is to run Velocyto on your cellranger processed folder. We used the python version: http://velocyto.org/velocyto.py/tutorial/index.html. 
