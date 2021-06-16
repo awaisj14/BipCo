@@ -1,16 +1,16 @@
 # BOUDREAU-PINSONNEAULT et al. SCENIC and scVelo scRNA-seq analysis of reprogrammed Muller glia
 
 
-We hope you find the explanations of the code easy to understand, we have included the explanations for a novice in bioinformatics as we were once when we started doing this analysis. 
+We hope you find the explanations of the code easy to understand, we have included the explanations for a novice in bioinformatics as we once were when we started doing this analysis. 
 We would love feedback on how we can improve and any issues you might be facing. Thank you for your time!
 
 1) scRNA-seq RNA-velocity
 
-We first used cellranger (the program created by 10x Genomics to align and count raw reads per cell with a genome) to generate the matrix files from our fastq files. This will generate a folder containing the .bam files, matrix.mtx, barcodes.tsv and features.tsv files among others. 
+We first used cellranger (the program created by 10x Genomics to align and count raw reads per cell with a genome) to generate the matrix files from our fastq files. For installation, follow this guide (https://support.10xgenomics.com/single-cell-gene-expression/software/pipelines/latest/installation). This will generate a folder containing the .bam files, matrix.mtx, barcodes.tsv and features.tsv files among others. 
 
 Once you have this folder, the next step is to run Velocyto on your cellranger processed folder. We used the python version: http://velocyto.org/velocyto.py/tutorial/index.html. 
 
-Side note: The hardest thing to setup are the installations/dependencies and 'environment' for your software (which in this case will be Velocyto). Since velocyto is run on linux based environments, you would first have to setup linux on your pc. One way is to install ubuntu on your windows 10 pc using the official windows store: https://www.microsoft.com/en-ca/p/ubuntu/9nblggh4msv6?activetab=pivot:overviewtab. Then you would have to install miniconda to set up the installation of velocyto. This is a blog outlining on how you could do that: https://varhowto.com/install-miniconda-ubuntu-20-04/. Once your conda environment is created, you can then run this code from the velocyto tutorial to start the installation of the dependencies:
+Side note: The hardest thing to setup are the installations/dependencies and 'environment' for your software (which in this case will be Velocyto). Since velocyto code is run on linux based environments, you would first have to setup linux on your pc. One way is to install ubuntu on your windows 10 pc using the official windows store: https://www.microsoft.com/en-ca/p/ubuntu/9nblggh4msv6?activetab=pivot:overviewtab. Then you would have to install miniconda to set up the installation of velocyto. This is a blog outlining on how you could do that: https://varhowto.com/install-miniconda-ubuntu-20-04/. Once your conda environment is created, you can then run this code from the velocyto tutorial to start the installation of the dependencies:
 
 conda install numpy scipy cython numba matplotlib scikit-learn h5py click
 
@@ -48,7 +48,7 @@ Then go to refdata-gex-mm10-2020-A/genes/genes.gtf for this file.
 
 When velocyto is done, it will place a .loom file in your cellranger directory. This file will contain all the unspliced and spliced data from your raw reads per cells. We like working with this because it is smaller in file size.
 
-The next step is the analysis itself. Now most of the work will be on python. To do this, we used Spyder https://www.spyder-ide.org/ using Anaconda. Amazing program that helps you use python and great for beginners. Install it and then you are not in the python environment. We use scVelo for the next analysis step. Just like linux, setting up the dependencies is the first step. We stitched together code from different places to make this python code: https://github.com/awaisj14/BipCo/blob/main/Mullers%20scVelo.py
+The next step is the analysis itself. Now most of the work will be on python. To do this, we used Anaconda and downloaded Spyder through the Anaconda Navigator (https://docs.anaconda.com/anaconda/install/windows/). Amazing program that helps you use python and great for beginners. Once in spyder, use the github code called "
 
 There you have it, you should be able to visualize your gene of interest in your dataset.
 
