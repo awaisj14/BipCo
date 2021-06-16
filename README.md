@@ -1,4 +1,4 @@
-# BOUDREAU-PINSONNEAULT et al. SCENIC and scVelo scRNA-seq analysis of reprogrammed Muller glia
+# BOUDREAU-PINSONNEAULT et al. SCENIC scRNA-seq analysis of reprogrammed Muller glia
 
 
 We hope you find the explanations of the code easy to understand, we have included the explanations for a novice in bioinformatics as we once were when we started doing this analysis. 
