@@ -34,7 +34,7 @@ rm -r <yourfolder>
 
 We only had to use these commands for most of the code in linux. 
 
-Since each machine is different, it would not be possible to be prepared for every possible error. That is why in case you run into an error, google is your friend! It will time and patience to find the solution to your specific problem but there will always be a solution on the web because your error won't be unique! 
+Since each machine is different, it would not be possible to be prepared for every possible error. That is why in case you run into an error, google is your friend! It will take time and patience to find the solution to your specific problem but there will always be a solution on the web because your error won't be unique! 
 
 Once installed, you can use this code to run velocyto on your 10x folder generated from cellranger:
 
